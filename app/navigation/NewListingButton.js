@@ -4,7 +4,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import colors from "../config/colors";
 
-function NewListingButton({ onPress }) {
+const NewListingButton=({ onPress }) =>{
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.container}>

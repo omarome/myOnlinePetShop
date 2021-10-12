@@ -1,6 +1,10 @@
-import React from "react";
+
+import * as Notifications from 'expo-notifications';
+import React, { useState, useEffect, useRef } from 'react';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+
+
 
 import AccountNavigator from "./AccountNavigator";
 import FeedNavigator from "./FeedNavigator";
@@ -8,9 +12,34 @@ import ListingEditScreen from "../screens/ListingEditScreen";
 import NewListingButton from "./NewListingButton";
 import routes from "./routes";
 
+
+
 const Tab = createBottomTabNavigator();
 
-const AppNavigator = () => (
+const AppNavigator = () =>{ 
+
+
+  useEffect(() => {
+    registerForPushNotifications ();
+  }),[];
+ 
+   const registerForPushNotifications = async () => {
+    
+    try {
+    
+      const permission = await Notifications.requestPermissionsAsync();
+      if(!permission.granted){
+        console.log("not garanted");
+         return;
+        };//if(!permission.granted) return;
+      
+      const token = await (await Notifications.getExpoPushTokenAsync()).data;//Notifications.getExpoPushTokenAsync();
+      console.log("token s",token);  
+    } catch (error) {
+      console.log('Error getting a push token',error);
+    }
+  } 
+  return (
   <Tab.Navigator screenOptions={{headerShown: false }}>
     <Tab.Screen
       name="Feed"
@@ -21,6 +50,8 @@ const AppNavigator = () => (
         ),
       }}
     />
+      
+ 
     <Tab.Screen
       name="ListingEdit"
       component={ListingEditScreen}
@@ -50,5 +81,5 @@ const AppNavigator = () => (
     />
   </Tab.Navigator>
 );
-
+    };
 export default AppNavigator;

@@ -25,13 +25,17 @@ const menuItems = [
   },
 ];
 
-function AccountScreen({ navigation }) {
+const AccountScreen=({ navigation })=> {
+  
+  const {user, logOut} = useAuth();
+
+
   return (
     <Screen style={styles.screen}>
       <View style={styles.container}>
         <ListItem
-          title="omar ome"
-          subTitle="omaromar@gmail.com"
+          title={user.name}
+          subTitle={user.email}
           image={require("../assets/omar.jpg")}
         />
       </View>
@@ -56,8 +60,9 @@ function AccountScreen({ navigation }) {
       </View>
       <ListItem
         title="Log Out"
-        IconComponent={<Icon name="logout" backgroundColor="#1C1E24" />}
-      />
+        IconComponent={<Icon name="logout" backgroundColor="#ffe66d" />}
+        onPress={ () => logOut()}
+        />
     </Screen>
   );
 }

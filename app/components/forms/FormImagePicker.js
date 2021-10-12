@@ -4,7 +4,7 @@ import { useFormikContext } from "formik";
 import ErrorMessage from "./ErrorMessage";
 import ImageInputList from "../ImageInputList";
 
-function FormImagePicker({ name }) {
+const FormImagePicker=({ name })=> {
   const { errors, setFieldValue, touched, values } = useFormikContext();
   const imageUris = values[name];
 

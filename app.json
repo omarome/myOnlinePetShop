@@ -1,14 +1,16 @@
 {
   "expo": {
-    "name": "donewithIt",
-    "slug": "donewithIt",
+    "name": "myOnlinePetShop",
+    "slug": "myOnlinePetShop",
+    "platforms": ["ios", "android", "web"],
+    "owner":"omaralm",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./app/assets/icon.png",
     "splash": {
       "image": "./app/assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "cover",
+      "backgroundColor": "#e63c4b"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -25,8 +27,9 @@
         "backgroundColor": "#FFFFFF"
       }
     },
-    "web": {
-      "favicon": "./app/assets/favicon.png"
+    "description": "A marketplace for selling or buying the pets .",
+    "notification": {
+      "iosDisplayInForeground": true
     }
   }
 }

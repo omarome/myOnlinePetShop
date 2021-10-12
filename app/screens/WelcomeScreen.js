@@ -4,7 +4,7 @@ import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
 import Button from "../components/Button";
 import routes from "../navigation/routes";
 
-function WelcomeScreen({ navigation }) {
+const WelcomeScreen=({ navigation })=> {
   return (
     <ImageBackground
       blurRadius={2}
