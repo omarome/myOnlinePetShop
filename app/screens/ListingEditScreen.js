@@ -47,7 +47,7 @@ const categories = [
     backgroundColor: "#fed330",
     icon: "twitter",
     label: "bird",
-    value: 3,
+    value: 4,
   },
 
 

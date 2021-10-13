@@ -3,9 +3,9 @@ import cache from "../utility/cache";
 import authStorage from "../auth/storage";
 
 const apiClient = create({
-  // here in the baseURL you should add the server ip insted or if you wuld ike to run it 
+  // here in the baseURL you should add the server ip insted or if you would ike to run it 
   // on the local machine then you have to write your local machine ip
-  baseURL: "http:....../api",
+  baseURL: "http:172.20.10.2:9000/api",
 });
 
 apiClient.addAsyncRequestTransform(async (request) => {
