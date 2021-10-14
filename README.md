@@ -7,6 +7,7 @@
 
 ## About the project
 This is PetStore, app for people looking to buy or sell their pet. Made to look simple and easy to use. People can contact eachother and get to know more about the pet.
+<img src="screenshots/1.png" width="100">
 ![petShop](screenshots/1.png)
 ![petShop](screenshots/2.png)
 ![petShop](screenshots/3.png)
