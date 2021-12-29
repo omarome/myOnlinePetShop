@@ -55,9 +55,8 @@ To get a local copy up and running follow these simple steps.
 ## Contact
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
-#Alexander Dedikova
 #Omar Al-Mashhadani
-#Karim Moubarik
+
 
 
 Project Link: [https://github.com/omarome/myOnlinePetShop)
